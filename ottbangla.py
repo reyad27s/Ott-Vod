@@ -76,7 +76,7 @@ def process_movie(movie):
 # প্রধান প্রসেসিং
 all_m3u_entries = []
 
-for page in range(1, 150):
+for page in range(1, 60):
     print(f"\nCollecting page {page}...")
     movies = fetch_movies(page)
     with ThreadPoolExecutor(max_workers=15) as executor:
