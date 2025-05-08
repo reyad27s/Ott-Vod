@@ -3,16 +3,16 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HEADERS = {
-    "API-KEY": "fjtqhf9zemvdo7w4u1e0rbi0",
+    "API-KEY": "ottbangla@android",
     "Authorization": "Basic YWRtaW46MTIzNA==",
-    "Host": "cinepro.live",
+    "Host": "otapp.store",
     "Connection": "Keep-Alive",
     "Accept-Encoding": "gzip",
     "User-Agent": "okhttp/4.9.0"
 }
 
 def fetch_movies(page=1):
-    url = f"https://cinepro.live/rest-api//v130/movies?page={page}"
+    url = f"https://otapp.store/rest-api//v130/movies?page={page}"
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
         data = response.json()
@@ -26,7 +26,7 @@ def fetch_movies(page=1):
         return []
 
 def fetch_single_movie_details(movie_id):
-    url = f"https://cinepro.live/rest-api//v130/single_details?type=movie&id={movie_id}"
+    url = f"https://otapp.store/rest-api//v130/single_details?type=movie&id={movie_id}"
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
         if response.status_code == 200:
